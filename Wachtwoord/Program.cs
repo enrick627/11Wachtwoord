@@ -29,7 +29,7 @@ namespace Wachtwoord
             string lettersfamillienaam;
             int zonenummer;
             int postcodenummer;
-            int wachtwoord;
+            string wachtwoord;
 
             //input
             //vraag de eerste 2 letters van de famillienaam
@@ -45,8 +45,10 @@ namespace Wachtwoord
             postcodenummer = int.Parse(Console.ReadLine());
 
             //bereken
-            wachtwoord = int.Parse(lettersfamillienaam + zonenummer + (postcodenummer * postcodenummer));
+            wachtwoord = (string)(lettersfamillienaam + zonenummer + (postcodenummer * postcodenummer));
 
+            //toon
+            Console.WriteLine(wachtwoord);
 
             //wachten
             Console.WriteLine();
